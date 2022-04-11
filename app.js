@@ -21,8 +21,8 @@ const User = require('./models/user');
 const mongoSanitize = require('express-mongo-sanitize');
 const helmet = require('helmet');
 const MongoStore = require("connect-mongo");
-const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/YelpCamp';
-
+const dbUrl = 'mongodb://localhost:27017/YelpCamp';
+//process.env.DB_URL || 
 const secret = process.env.SECRET || 'thishouldbeasecret';
 mongoose.connect(dbUrl);
 const db = mongoose.connection;
@@ -144,6 +144,9 @@ app.use('/campgrounds/:id/reviews', reviewRouter);
 
 const userRouter = require('./routes/users');
 app.use('/', userRouter);
+
+const searchRouter = require('./routes/search');
+app.use('/search', searchRouter);
 
 app.get('/', (req, res) => {
     res.render('home');
