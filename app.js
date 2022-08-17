@@ -26,6 +26,7 @@ const dbUrl = 'mongodb://localhost:27017/YelpCamp';
 const secret = process.env.SECRET || 'thishouldbeasecret';
 mongoose.connect(dbUrl);
 const db = mongoose.connection;
+
 db.on('error', err => {
     console.log(err);
 });

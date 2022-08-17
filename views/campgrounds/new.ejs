@@ -3,7 +3,7 @@
     <div class="row text-align center">
         <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
             <div class="card pt-3 pb-5 px-5 shadow mb-5 bg-body rounded">
-                <h4 class="h4 text-center card-title">New Campground</h4>
+                <h4 class="h4 text-center card-title">New Place</h4>
                 <form class="validated-form" action="/campgrounds" method="POST" novalidate
                     enctype="multipart/form-data">
                     <div class="mb-3">
@@ -28,7 +28,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="price" class="form-label">Campground Price : </label>
+                        <label for="price" class="form-label">Price : </label>
                         <div class="input-group">
                             <span class="input-group-text">$</span>
                             <input type="number" class="form-control" name="campground[price]" id="price"
@@ -47,9 +47,9 @@
                         </div>
                     </div>
 
-                    <button class="btn btn-success mb-3 col-12">Add Campground</button>
+                    <button class="btn btn-success mb-3 col-12">Add Place</button>
                 </form>
-                <a href="/campgrounds" class="btn btn-primary">All Campgrounds</button></a>
+                <a href="/campgrounds" class="btn btn-primary">All Places</button></a>
             </div>
         </div>
     </div>
