@@ -21,9 +21,10 @@ const User = require('./models/user');
 const mongoSanitize = require('express-mongo-sanitize');
 const helmet = require('helmet');
 const MongoStore = require("connect-mongo");
+
 const dbUrl = 'mongodb://localhost:27017/YelpCamp';
-//process.env.DB_URL || 
-const secret = process.env.SECRET || 'thishouldbeasecret';
+
+const secret = process.env.DB_URL || 'thishouldbeasecret';
 mongoose.connect(dbUrl);
 const db = mongoose.connection;
 

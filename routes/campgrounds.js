@@ -27,7 +27,6 @@ router.route('/:id')
 
 router.get('/:id/edit', isLoggedIn, isAuthor, catchAsync(campground.renderEditForm));
 
-
 module.exports = router;
 
 

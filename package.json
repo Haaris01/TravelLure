@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": ""
   },
   "keywords": [],
   "author": "",
@@ -25,6 +25,7 @@
     "express-session": "^1.17.2",
     "helmet": "^5.0.2",
     "helmet-csp": "^3.4.0",
+    "heroku": "^7.62.0",
     "joi": "^17.6.0",
     "mapbox-gl": "^2.7.0",
     "mapbox-gl-geocoder": "^2.0.1",

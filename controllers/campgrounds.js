@@ -6,16 +6,16 @@ const geocoder = mbxGeocoding({accessToken: mapBoxToken});
 
 module.exports.searchCampground = async (req, res) => {
     console.log(req.query);
-    // const campground = await Campground.findOne({title: req.body.searchCampground}).populate({
-    //     path: 'reviews',
-    //     populate: 'author',
-    // }).populate('author');
-    // if (!campground) {
-    //     req.flash('error', 'Campground not found');
-    //     return res.redirect('/campgrounds');
-    // }
-    // console.log(campground);
-    // res.render('campgrounds/show', { campground });
+    const campground = await Campground.findOne({title: req.body.searchCampground}).populate({
+        path: 'reviews',
+        populate: 'author',
+    }).populate('author');
+    if (!campground) {
+        req.flash('error', 'Campground not found');
+        return res.redirect('/campgrounds');
+    }
+    console.log(campground);
+    res.render('campgrounds/show', { campground });
 }
  
 module.exports.index = async (req, res, next) => {
