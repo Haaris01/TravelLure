@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Campground = require('../models/campground');
 mongoose.connect(
-    "mongodb+srv://haris_1:pass%123@cluster0.5xo73.mongodb.net/YelpCamp"
+    "mongodb+srv://haris_1:iBk9tqBqUfu5YPDU@cluster0.5xo73.mongodb.net/"
 );
 const db = mongoose.connection;
 const cities = require('./cities');
@@ -18,6 +18,7 @@ const sample = array => array[Math.floor(Math.random() * array.length)];
 
 const seedDB = async () => {
     await Campground.deleteMany({});
+    
     for (let i = 0; i < 1000; i++) {
         const price = Math.floor(Math.random() * 20) + 10;
         const sampleCity = sample(cities);

@@ -38,7 +38,7 @@
                         <%= campground.location %>
                     </li>
                     <li class="list-group-item">
-                        Submitted by <%= campground.author.username %>
+                        Submitted by <%= campground.author ? campground.author.username : 'Unknown' %>
                     </li>
                     <li class="list-group-item">$<%= campground.price%>/Night</li>
                 </ul>
