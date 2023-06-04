@@ -1,6 +1,8 @@
 if (process.env.NODE_ENV !== "production") {
     require('dotenv').config();
 }
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 
 const mongoose = require('mongoose');
 const express = require('express');
@@ -56,6 +58,20 @@ const sessionConfig = {
         maxAge: 1000 * 24 * 60 * 60 * 7,
     }
 }
+
+const firebaseConfig = {
+    apiKey: "AIzaSyCG1oJNymI8a24qwZK0QlsfCrX6Tbe9s4E",
+    authDomain: "travellure-c1015.firebaseapp.com",
+    projectId: "travellure-c1015",
+    storageBucket: "travellure-c1015.appspot.com",
+    messagingSenderId: "1004788136442",
+    appId: "1:1004788136442:web:e70b76551d60f0c6618c43",
+    measurementId: "G-6TTGN22JFJ",
+};
+
+// Initialize Firebase
+const firebaseapp = initializeApp(firebaseConfig);
+const analytics = getAnalytics(firebaseapp);
 
 
 app.engine('ejs', ejsMate);
