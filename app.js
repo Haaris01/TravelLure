@@ -51,7 +51,7 @@ const sessionConfig = {
     saveUninitialized: true,
     cookie: {
         httpOnly: true,
-        // secure: true, -> cookies are accessible only thru https only (http-secure)
+        // secure: true, -> cookies are accessible only thru http only (http-secure)
         expires: Date.now() + (1000 * 24 * 60 * 60 * 7), //in milliseconds
         maxAge: 1000 * 24 * 60 * 60 * 7,
     }
@@ -73,27 +73,27 @@ app.use(mongoSanitize({
 
 
 const scriptSrcUrls = [
-    "https://cdn.jsdelivr.net/npm/",
-    "https://api.tiles.mapbox.com/",
-    "https://api.mapbox.com/",
-    "https://kit.fontawesome.com/",
-    "https://cdnjs.cloudflare.com/",
-    "https://cdn.jsdelivr.net",
+    "http://cdn.jsdelivr.net/npm/",
+    "http://api.tiles.mapbox.com/",
+    "http://api.mapbox.com/",
+    "http://kit.fontawesome.com/",
+    "http://cdnjs.cloudflare.com/",
+    "http://cdn.jsdelivr.net",
 ];
 const styleSrcUrls = [
-    "https://cdn.jsdelivr.net/npm/",
-    "https://kit-free.fontawesome.com/",
-    "https://stackpath.bootstrapcdn.com/",
-    "https://api.mapbox.com/",
-    "https://api.tiles.mapbox.com/",
-    "https://fonts.googleapis.com/",
-    "https://use.fontawesome.com/",
+    "http://cdn.jsdelivr.net/npm/",
+    "http://kit-free.fontawesome.com/",
+    "http://stackpath.bootstrapcdn.com/",
+    "http://api.mapbox.com/",
+    "http://api.tiles.mapbox.com/",
+    "http://fonts.googleapis.com/",
+    "http://use.fontawesome.com/",
 ];
 const connectSrcUrls = [
-    "https://api.mapbox.com/",
-    "https://a.tiles.mapbox.com/",
-    "https://b.tiles.mapbox.com/",
-    "https://events.mapbox.com/",
+    "http://api.mapbox.com/",
+    "http://a.tiles.mapbox.com/",
+    "http://b.tiles.mapbox.com/",
+    "http://events.mapbox.com/",
 ];
 const fontSrcUrls = [];
 
@@ -108,8 +108,8 @@ app.use(helmet.contentSecurityPolicy({
             "'self'",
             "blob:",
             "data:",
-            "https://res.cloudinary.com/dqevklduu/", //SHOULD MATCH YOUR CLOUDINARY ACCOUNT! 
-            "https://images.unsplash.com/",
+            "http://res.cloudinary.com/dqevklduu/", //SHOULD MATCH YOUR CLOUDINARY ACCOUNT! 
+            "http://images.unsplash.com/",
         ],
         fontSrc: ["'self'", ...fontSrcUrls],
     },
