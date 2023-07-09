@@ -53,6 +53,15 @@
     <script src="http://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
+        <script>
+            // Get all anchor tags on the website
+            const anchorTags = document.querySelectorAll('a');
+            
+            // Loop through each anchor tag and set the target attribute to "_blank"
+            anchorTags.forEach((anchorTag) => {
+                anchorTag.setAttribute('target', '_blank');
+            });
+        </script>
 </body>
 
 </html>

@@ -13,6 +13,15 @@
     <script src='http://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
     <link href='http://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="/stylesheets/app.css">
+    <script>
+        // Get all anchor tags on the website
+        const anchorTags = document.querySelectorAll('a');
+      
+        // Loop through each anchor tag and set the target attribute to "_blank"
+        anchorTags.forEach((anchorTag) => {
+          anchorTag.setAttribute('target', '_blank');
+        });
+      </script>
 
 </head>
 
